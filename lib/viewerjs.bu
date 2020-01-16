@@ -1,0 +1,71 @@
+"use strict";
+
+var geoApp = geoApp || {};
+
+let Map = ol.Map;
+let View = ol.View;
+let ImageLayer = ol.layer.Image;
+let fromLonLat = ol.proj.fromLonLat;
+let Projection = ol.proj.Projection;
+let ImageWMS = ol.source.ImageWMS;
+let defaultControls = ol.control.defaults;
+let ScaleLine = ol.control.ScaleLine;
+
+proj4.defs('EPSG:28992', `+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.2369,50.0087,465.658,-0.406857,0.350733,-1.87035,4.0812 +units=m +no_defs`);
+ol.proj.proj4.register(proj4);
+
+geoApp.rdNew = new Projection({
+  code: 'EPSG:28992',
+  extent: [482.06, 308914.15, 275902.39, 636381.86]
+});
+
+geoApp.ngExtent = [130000, 445000, 140000, 455000];
+
+geoApp.init = function () {
+
+  let layers = [];
+
+  $.each(geoApp.applicatieSettings.overLays, (index, layerConfig) => {
+    if (layerConfig.type === "wms") {
+      layers.push(geoApp.createWMSLayer(layerConfig));
+    }
+  });
+
+  let mapOptions = {
+    controls: defaultControls().extend([
+      new ScaleLine()
+    ]),
+    layers: layers,
+    // target: 'map',
+    view: new View({
+      projection: geoApp.rdNew,
+      center: [135089.1, 448762.5],
+      extent: geoApp.ngExtent,
+      zoom: 2
+    })
+  };
+  console.log(layers)
+  let map = new Map(mapOptions);
+  geoApp.map = map;
+
+  map.setTarget('map');
+};
+
+geoApp.createWMSLayer = function (layerConfig) {
+  let layer = new ImageLayer({
+    title: '' || layerConfig.title,
+    extent: geoApp.ngExtent,
+    source: new ImageWMS({
+      url: layerConfig.url,
+      // crossOrigin: 'anonymous',
+      attributions: '' || layerConfig.attribution,
+      params: {
+        'LAYERS': layerConfig.params.layers,
+        'STYLES': '' || layerConfig.params.styles,
+        'BUFFER': layerConfig.params.buffer || 10,
+      },
+    }),
+    visible: layerConfig.options.visibility === false ? false : true,
+  });
+  return layer;
+};

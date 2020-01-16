@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html >
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/infopage_style.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/details-shim.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/jquery-ui.min.css" type="text/css"/>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/details-shim.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/transparancy-slider.js"></script>
+
+
+    </head>
+    <body>
+        <div class="tab-head">
+            <span>Hitte</span>
+        </div>
+        <div class="text-content">
+        
+        <section>
+            <p>
+                Van een lekkere zomerse week, kan vrijwel iedereen genieten.
+                Houden deze temperaturen zich langer aan, wordt het voor velen al als onprettig ervaren.
+                Je concentratie en eetlust gaan achteruit en het is niet prettig om je buiten te begeven.
+            </p>
+            <p>
+                De Hollandse leefomgeving is in 9 van de 10 gevallen, niet voorbereid op hoge temperaturen voor een langere tijd.
+                Plekken van schaduw, water en voornamelijk koelte zijn in hete periode cruciaal om je fijn te voelen in een omgeving.
+            </p>
+            <p>
+                De problematiek rondom het thema hitte zal zich het snelst ontwikkelen in gebieden met weinig groen, en dus veel beton en/of ander soorten verharding.
+                Deze gebieden warmen langzaam op, maar kan zijn warmte niet kwijt aan de omgeving.
+                Het gevolg is dat de warmte blijft hangen, ook in de avonduren. Warme nachten (boven de 20 °C) nemen in deze gebieden dus (in Nieuwegein) toe van 5 tot zelfs 20 warme nachten per jaar.
+            </p>
+            <p>
+                Hitte vormt met name voor de kwetsbare groepen van de samenleving een probleem.
+                Denk hierbij aan kinderen, ouderen en hulp behoevende.
+            </p>
+        </section>
+        <br>
+        <section class="uitlegLagen">
+            <h4>Op de kaart</h4>
+            <details class="infoPageLegend open">
+                <summary>Overzicht van kwetsbare locaties</summary>
+                <p>
+                    Een kwetsbare locatie heeft ten tijde van hitte, extra aandacht nodig voor verkoeling.
+                    Bij een brug kan hitte ervoor zorgen, dat het materiaal zich uitzet.
+                    De aandacht die hierbij vereist is, is verkoeling.
+                    Dit wordt vaak gedaan door de brug nat te houden.
+                    Bij zwemwater kan de hitte voor een toename aan algen of andere bacteriën zorgen.
+                    De kwaliteit van het water moet op deze locaties dus extra in de gaten gehouden worden.
+                    Maar bij kwetsbare locaties kan ook gedacht worden aan verzorgingstehuizen,
+                    waar extra maatregelen getroffen moeten worden ten behoeve van hitte.
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Kwetsbare locaties"/>
+                    <span id="checkboxSpan1">Kwetsbare locaties</span>
+                </label>
+            </details>
+            <br>
+            <details class="infoPageLegend">
+                <summary>Opwarming oppervlaktewater</summary>
+                <p>
+                    De kaart laat de gemiddelde opwarming van het water zien.
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Opwarming oppevlaktewater huidig"/>
+                    <span id="checkboxSpan2">Opwarming opp. water huidig</span>
+                </label>
+                <br>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Opwarming oppevlaktewater 2050"/>
+                    <span id="checkboxSpan3">Opwarming opp. water 2050</span>
+                </label>
+            </details>
+            <br>
+            <details class="infoPageLegend">
+                <summary>Relatieve gevoelstemperatuur</summary>
+                <p>
+                   De relatieve gevoelstemperatuur gaat over situaties waarin het buiten 33 °C is, maar warmer aanvoelt.
+                   Het aantal graden wat aangegeven staat op de kaart, is dus de extra temperatuur die gevoelt wordt.
+                   Bovenop de 33 °C.
+                </p>
+
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Relatieve gevoelstemperatuur 2014"/>
+                    <span id="checkboxSpan4">Relatieve Gevoelstemperatuur 2014</span>
+                </label>
+                <br>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Relatieve gevoelstemperatuur 2050"/>
+                    <span id="checkboxSpan5">Relatieve Gevoelstemperatuur 2050</span></label>
+            </details>
+            <br>
+            <details class="infoPageLegend">
+                <summary>Hittestress door warme nachten</summary>
+                <p>
+                   
+                </p>
+
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Hittestress door warme nachten huidig"/>
+                    <span id="checkboxSpan4">Hittestress door warme nachten huidig</span>
+                </label>
+                <br>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Hittestress door warme nachten 2050"/>
+                    <span id="checkboxSpan5">Hittestress door warme nachten 2050</span></label>
+            </details>
+
+        </section>
+        <br>
+        <!--<section class="downloadContainer">
+            <h4>Downloads</h4>
+            <p>De cijfers staan per thema in een tabblad binnen het te downloaden Excel bestand.</p>
+            <ul>
+                <li>
+                    <a class="downloadText">(Excel): </a>
+                    <a class="downloadButton" href="../download/_leeg.xlsx" download><span>Download</span></a>
+                </li>
+            </ul>
+        </section>-->
+        <section>
+            <h4>Legenda</h4>
+            <details class="infoPageLegend">
+                <summary>Kwetsbare locaties</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_hitte_kwetsbare_locaties.png"/>
+                    </li>
+                </ul>
+            </details>
+            <details class="infoPageLegend">
+                <summary>Opwarming oppervlaktewater (dagen)</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_hitte_opwarming_opp_wat.png"/>
+                    </li>
+                </ul>
+            </details>
+            <details class="infoPageLegend">
+                <summary>Gevoelstemperatuur bij 33&deg;C</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_hitte_gevoel.png"/>
+                    </li>
+                </ul>
+            </details>
+            
+            <details class="infoPageLegend">
+                <summary>Hittestress door warme nachten</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_hitte_hittestress_door_warme_nachten.png"/>
+                    </li>
+                </ul>
+            </details>
+           <!-- <details class="infoPageLegend">
+                <summary>Relatieve gevoelstemperatuur</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_hitte_relatieve_gevoelstemperatuur.png"/>
+                    </li>
+                </ul>
+            </details>
+            <details class="infoPageLegend">
+                <summary>Luchttemperatuur</summary>
+                <ul>
+                    <li>
+                        <p style="font-weight: normal">Temperatuur voor 2050 is t.o.v. de voorspelling voor buitengebied 2014</p>
+                        <img src="./legenda_hitte_luchttemperatuur.png"/>
+                    </li>
+                </ul>
+            </details> -->
+        </section>
+        </div>
+        <div class="bronVermelding">
+                <p>Bron: <a href="http://www.klimaateffectatlas.nl">Klimaateffectatlas</a></p>
+        </div>
+    </body>
+</html>

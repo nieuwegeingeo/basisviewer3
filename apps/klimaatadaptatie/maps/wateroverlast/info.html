@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/infopage_style.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/details-shim.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/jquery-ui.min.css" type="text/css"/>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/details-shim.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/transparancy-slider.js"></script>
+
+    </head>
+    <body>
+    <div class="tab-head">
+        <span>Wateroverlast</span>
+    </div>
+    <div class="text-content">
+
+        <section>
+            <p>
+                Nederland staat bekend om haar druilerige weer, vaak regen en weinig zon.
+                Nu de klimaatverandering steeds meer haar voeten in de aarde zet en de effecten merkbaar worden, zal dit druilerige weer langzamerhand steeds meer veranderen.
+                Eén van deze veranderingen is het feit dat de buien die boven ons land vallen, extremer zullen worden.
+                Dit houdt in: relatief kortere buien (piek bui) met veel neerslag.
+                Het gemeentelijk rioleringssysteem is op voorhand niet berekend op extremen die in deze tijden vallen.
+                Het kan dus zomaar voorkomen dat tijdens zo’n piek bui water op straat blijft staan. Deze overlast probeert men zoveel mogelijk te voorkomen.
+            </p>
+        </section>
+        <section class="uitlegLagen">
+            <h4>Op de kaart</h4>
+
+            <details class="infoPageLegend open">
+                <summary>Wateroverlast 100mm</summary>
+                <p>
+                    Adviesbureau Tauw heeft door middel van een analyse van de hoge en lage gebieden in Nieuwegein overlast locaties in kaart gebracht.
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Wateroverlast 100mm"/>
+                    <span id="checkboxSpan1">Wateroverlast 100mm</span>
+                </label>
+             </details>
+             <br>
+             <details class="infoPageLegend">
+                <summary>Maximale overstromingsdiepte</summary>
+                <p>
+                        
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Maximale overstromingsdiepte"/>
+                    <span id="checkboxSpan2">Maximale overstromingsdiepte</span>
+                </label>
+              </details>
+              <br>
+              <details class="infoPageLegend">
+                <summary>Risico op wateroverlast</summary>
+                <p>
+                    De kaart geeft een indeling op drie typologieën.
+                    Deze worden berekend aan de hand van het water op straat (wateroverlast kaart) en de locatie van gebouwen in de stad.
+                    Hoe dichterbij de plassen richting de panden gaan, hoe hoger het risico wordt aangegeven.
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Risico op wateroverlast"/>
+                    <span id="checkboxSpan2">Risico op wateroverlast</span>
+                </label>
+              </details>
+              <br>
+             <details class="infoPageLegend open">
+                <summary>Waterlopen</summary>
+                <p>
+                    Deze laag geeft de waterlopen in de gemeente aan.
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="waterlopen"/>
+                    <span id="checkboxSpan4">Waterlopen laag</span>
+                </label>
+            </details>
+
+        </section>
+        <br>
+        <!--<section class="downloadContainer">
+            <h4>Downloads</h4>
+            <p>De cijfers staan per thema in een tabblad binnen het te downloaden Excel bestand.</p>
+            <ul>
+                <li>
+                    <a class="downloadText">(Excel): </a>
+                    <a class="downloadButton" href="../download/_leeg.xlsx" download><span>Download</span></a>
+                </li>
+            </ul>
+        </section>-->
+        <section>
+            <h4>Legenda</h4>
+
+            <details class="infoPageLegend">
+                <summary>Wateroverlast 100mm</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_wateroverlast_overlast_100mm.png" alt="wateroverlast 100mm legenda"/>
+                    </li>
+                </ul>
+            </details>
+            <br>
+            <details class="infoPageLegend">
+                <summary>Maximale overstromingsdiepte</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_wateroverlast_maximale_overstromingsdiepte.png" alt="Maximale overstromingsdiepte legenda"/>
+                    </li>
+                </ul>
+            </details>
+            <br>            
+            <details class="infoPageLegend">
+                <summary>Risico op wateroverlast</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_wateroverlast_risico_op_overlast.png" alt="risico op overlast legenda"/>
+                    </li>
+                </ul>
+            </details>
+            <br>            
+            <details class="infoPageLegend">
+                <summary>Waterlopen</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_wateroverlast_waterlopen.png" alt="waterlopen legenda"/>
+                    </li>
+                </ul>
+            </details>
+
+        </section>
+
+        </div>
+        <div class="bronVermelding">
+                <p>Bron: <a href="http://www.klimaateffectatlas.nl">Klimaateffectatlas</a>, Tauw</p>
+        </div>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery.details.min.js"></script>
+
+    </body>
+</html>

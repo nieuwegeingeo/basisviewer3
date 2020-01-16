@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/infopage_style.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/details-shim.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/jquery-ui.min.css" type="text/css"/>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/details-shim.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/transparancy-slider.js"></script>
+
+
+    </head>
+    <body id="main-page" style="height: 500%">
+    <div class="tab-head">
+            <span>Droogte</span>
+        </div>
+    <div class="text-content">
+
+        <section>
+            <p>
+                Bij het klimaat wordt massaal gedacht aan de waterhuishouding en hoe wij in ons laag gelegen land, droge voeten houden.
+                Maar wist je, dat de (veen)bodem sneller daalt, dan de zeespiegel stijgt?
+                Dit proces van bodemdaling kan door de klimaatverandering enkel maar versterkt worden.
+            </p>
+            <p>
+                Het thema droogte gaat over periode(n) met water <i>tekort</i>.
+            </p>
+            <p>
+                Een (te) lang water tekort in de bodem, heeft gevolgen voor plant, dier, milieu én economie.
+                Want gewassen groeien enkel met voldoende water, een ecosysteem in sloot wordt aangetast door te weinig water,
+                de grondwaterstanden kunnen dalen en zo zijn er nog vele voorbeelden te noemen die samenhangen met een water tekort.
+
+            </p>
+        </section>
+        <br>
+        <section class="uitlegLagen">
+            <h4>Op de kaart</h4>
+            <details class="infoPageLegend open">
+                <summary>Risico op paalrot</summary>
+                <p>
+                    Vroeger werden woningen op houten palen gebouwd.
+                    Deze houten palen staan al eeuwen lang onder water (grondwaterstand).
+                    Op het moment dat er een daling in grondwater plaats vindt, komen deze palen in aanraking met zuurstof.
+                    Deze zuurstof in combinatie met de vochtige palen, is de ideale situatie voor bacteriën om zich te nestelen en op deze manier de palen flinke schade aan te doen.
+                </p>
+                <p>
+                    Op de kaart zijn gebieden te zien die mogelijk op houten palen zijn gebouwd, en hiermee direct risico met zich meedragen voor de daling van de grondwaterstand.
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Risico op paalrot"/>
+                    <span id="checkboxSpan1">Risico op paalrot</span>
+                </label>
+            </details>
+            <br>
+            <details class="infoPageLegend">
+                <summary>Potentieel maximaal neerslagtekort (p/jaar)</summary>
+                <p>
+                    <span>Het potentieel neerslagtekort is een maatstaaf voor de droogte in ons land.
+                        Het wordt berekend aan de hand van het verschil tussen de verdamping en neerslag tijdens de periode april tot en met september.
+                        Wanneer er een neerslag tekort optreed heeft dit gevolgen voor de beschikbaarheid van water.
+                        In deze periode is er namelijk vaak minder water beschikbaar, maar juist meer nodig.
+                    </span>
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Maximaal neerslag tekort huidig"/>
+                    <span id="checkboxSpan1">Maximaal neerslagtekort huidig</span>
+                </label>
+                <br>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Maximaal neerslag tekort 2050"/>
+                    <span id="checkboxSpan1">Maximaal neerslagtekort 2050</span>
+                </label>
+            </details>
+            <br>
+            <details class="infoPageLegend">
+                <summary>Gemiddeld laagste grondwaterstand</summary>
+                <p>
+                    <span>
+                    </span>
+                </p>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Gemiddeld laagste grondwaterstand huidig"/>
+                    <span id="checkboxSpan1">Gemiddeld laagste grondwaterstand huidig</span>
+                </label>
+                <br>
+                <label class="checkboxLabel">
+                    <input class="layerBox" type="checkbox" value="Gemiddeld laagste grondwaterstand 2050"/>
+                    <span id="checkboxSpan1">Gemiddeld laagste grondwaterstand 2050</span>
+                </label>
+                
+            </details>
+
+        </section>
+        <br>
+        <!--<section class="downloadContainer">
+            <h4>Downloads</h4>
+            <p>De cijfers staan per thema in een tabblad binnen het te downloaden Excel bestand.</p>
+            <ul>
+                <li>
+                    <a class="downloadText">(Excel): </a>
+                    <a class="downloadButton" href="../download/_leeg.xlsx" download><span>Download</span></a>
+                </li>
+            </ul>
+        </section>-->
+        <section>
+            <h4>Legenda</h4>
+            <details class="infoPageLegend">
+                <summary>Risico op paalrot</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_droogte_paalrot.png"/>
+                    </li>
+                </ul>
+            </details>
+
+            <details class="infoPageLegend">
+                <summary>Potentieel maximaal neerslagtekort</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_droogte_max_neerslagtekort.png"/>
+                    </li>
+                </ul>
+            </details>
+
+            <details class="infoPageLegend">
+                <summary>Gemiddelde grondwaterstand (m)</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_droogte_gem_gws.png"/>
+                    </li>
+                </ul>
+            </details>
+            
+            <details class="infoPageLegend">
+                <summary>Gemiddeld laagste grondwaterstand huidig</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_droogte_gem_laagste_grondwaterstand_huidig.png"/>
+                    </li>
+                </ul>
+            </details>
+            
+            <details class="infoPageLegend">
+                <summary>Gemiddeld laagste grondwaterstand 2050</summary>
+                <ul>
+                    <li>
+                        <img src="./legenda_droogte_gem_laagste_grondwaterstand_2050.png"/>
+                    </li>
+                </ul>
+            </details>
+            </section>
+
+            </div>
+            <div class="bronVermelding">
+                <p>Bron: <a href="http://www.klimaateffectatlas.nl">Klimaateffectatlas</a></p>
+            </div>
+        <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery.details.min.js"></script>
+    </body>
+</html>

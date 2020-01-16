@@ -1,0 +1,25 @@
+{
+  "name": "ol6",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "ol": "^6.1.1",
+    "proj4": "^2.6.0"
+
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "parcel": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel index.html settings.js",
+    "build": "parcel build --no-content-hash --experimental-scope-hoisting --public-url . index.html settings.js"
+  },
+  "keywords": [],
+  "author": "Michiel Kselik",
+  "license": "ISC"
+}

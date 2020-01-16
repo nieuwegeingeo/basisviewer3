@@ -1,0 +1,111 @@
+Geodan.applicatieSettings = {
+	
+	// example to change the restricted extent: 
+	// restrictedExtent: new OpenLayers.Bounds(130502, 442002, 140500, 455500),
+	
+	// example with an OSM layer !
+	// because we do want two base layers, we redefine the 'Kaart'-layer
+	// so redefine baseLayers:
+	/*
+	baseLayers: [
+		{
+			title: 'Luchtfoto',
+			url: 'http://' + location.hostname + '/mapproxy/service',
+			params: {
+				layers: 'basisluchtfoto',		// geowebcache layer	 
+				format: 'image/png'
+			},
+			options: {
+				//transitionEffect:'resize'
+			}  
+		},
+		{	// LET OP!!! WE HERDEFINIEREN KAART HIER OMDAT WE DE OSM ONDERLAAG WILLEN
+			title: 'Kaart',
+			url: 'http://' + location.hostname + '/mapproxy/service',
+			params: {
+				layers: 'osm',
+				format: 'image/png'
+			},
+			options: {
+				//transitionEffect:'resize'
+			}  
+		}
+	],
+	*/
+	
+   // different types of overlays:
+   /* 
+   overLays: [
+		{
+		  type: 'wms',
+		  title: 'Meetpunten stikstofdioxide (NO2)',
+		  url: 'http://' + location.host +'/geoserver/wms',
+		  params: {
+			 layers: 'Nieuwegein:Meetpunten_NO2_2011',
+			 format: 'image/png'
+		  },
+		  options: {
+			singleTile: true,
+			maxResolution: 14.0
+		  }
+		},
+		{
+			type: 'kml',
+			title: 'Dit is een kml laag',
+			// if you want a label, uncomment follow line and give attribute name 
+			// which you want to use as label
+			//label: "name",
+			// if you want to use a sld file for this vector/kml layer, use a sld parameter:
+			//sld: "kml.sld",
+			protocolOptions: {
+					url: "kunstroute.kml"
+					,format: new OpenLayers.Format.KML({
+						kmlns: "http://earth.google.com/kml/2.2",
+						extractStyles: true,
+						extractAttributes: true })
+			}
+		}
+	],
+	*/
+	
+	// example to center on a point (can also be used with querystring !!)
+	//urlParams: {centerx:134192, centery:448499, kaartschaal:15000 }
+	// is the same as calling page with
+	// ?centerx=134192&centery=448499&kaartschaal=15000
+	
+	//If provide a (fixed) legend image, it will be shown in the map
+    //,legendUrl: 'Legenda_FR_WR_route.PNG'
+}
+
+Geodan.applicatieInit = function(){
+	/*
+	// If you want a layermanager, do this:
+	layermanager = new OpenLayers.Control.LayerSwitcher();
+	// If you want only ONE layer viewable at a time (like it is a radio group)
+	layermanager.singleDataLayerView=true;
+	// else do nothing (default is a normal layermanager) or do
+	//layermanager.singleDataLayerView=true;
+	Geodan.map.addControl(layermanager);
+	layermanager.activate();
+	// if you want the layermanager to be opened at startup:
+	layermanager.maximizeControl();
+	*/
+	
+	
+	// to show a Kaart instead of Luchtfoto, click on Kaart button:
+	//$('#Kaart').click()
+	// to show a Luchtfoto instead of Kaart, click on Luchtfoto button:
+	//$('#Luchtfoto').click()
+	
+	
+	// to change opacity
+	//Geodan.map.getLayersByName('Kaart')[0].setOpacity(0.3);
+	//or
+	//Geodan.map.getLayersByName('Luchtfoto')[0].setOpacity(0.3);
+	
+	
+	// PROXY
+	// do not define: OpenLayers.ProxyHost because problems with the geocoder will arise
+	// instead define Geodan.Settings.proxyUrl
+	// Geodan.Settings.proxyUrl = "http://"+window.location.host+"/cgi-bin/proxy.py?url=";
+}

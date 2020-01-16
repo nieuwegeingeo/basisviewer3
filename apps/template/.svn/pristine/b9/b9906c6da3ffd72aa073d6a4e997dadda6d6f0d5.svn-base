@@ -1,0 +1,99 @@
+
+var Geodan = Geodan || {};
+Geodan.Settings = {
+
+  // reverse geocoder (default is geoserver.nl GET)
+  reverseGeocoder: {
+    url: 'http://' + location.host + '/geocoder-1.0.1/revgeocoder',
+    method: 'POST'
+  },
+  
+  /**
+  * Viewer zal adresveld bovenin krijgen met tooltip die te wijzigen is door
+  *   gemeente Nieuwegein (in settings.js)
+  * Inzoomen op straat kent een bepaalde marge rond extent, en een minimum scale
+  *   (instelbaar in settings.js); inzoomen op verblijfsobject kent ook een
+  *   bepaalde marge en minimum scale
+  * Autocomplete van adresveld is instelbaar; standaard na 3 tekens, 0.5 sec, en max 10 resultaten
+  * 40 posities in adresveld voor straat + huisnr
+  */
+  geocoder: {
+    url: 'http://' + location.host + '/geocoder/geocode?',
+    //tooltip: 'Zoek op postcode of straat, met huisnummers.',
+    extentMargin: 100, // postcode en straat
+    pointMargin: 20, // coordinaat van verblijfsobject
+    minimumZoomScale: 500,
+    autocomplete: {
+      minLength: 3,
+      delay: 200
+    },
+    inputSize: 40
+  },
+  
+  // raster
+  // 19 januari 2012: PDOK resolutions
+  resolutions: new Array( 
+	3440.640, 
+	1720.320,
+	860.160, 
+	430.080, 
+	215.040, 
+	107.520, 
+	53.760, 
+	26.880, 
+	13.440, 
+	6.720, 
+	3.360, 
+	1.680, 
+	0.840, 
+	0.420, 
+	0.210,
+	0.105,
+	0.0525
+   ),
+   
+  // NL tileschema PDOK
+  //maxExtent: new OpenLayers.Bounds(-65200.96, 242799.04, 375200.96, 683200.96),
+  // NL tileschema Geonovum
+  maxExtent: new OpenLayers.Bounds(-285401.920, 22598.080, 595401.920, 903401.920),
+  restrictedExtent: new OpenLayers.Bounds(132502, 445002, 137500, 453000),
+
+  defaultPopupSize: '400,400',
+  
+  initialZoom: 8,
+
+  baseLayers: [
+    {
+      title: 'Luchtfoto',
+      url: 'http://' + location.hostname + '/geowebcache/service/wms',
+      params: {
+         layers: 'basisluchtfoto',
+		 format: 'image/jpeg'
+      }
+    }
+	,
+  	{
+      title: 'Kaart',
+      url: 'http://' + location.hostname + '/geowebcache/service/wms',
+      params: {
+         layers: 'basistopo',
+		 format: 'image/jpeg'
+      }
+    }
+  ],
+
+  overLays: [
+	
+  ],
+    
+  
+  /**
+   * Let op: url moet eindigen op ? of &
+   */
+  urlParams: {}
+
+};
+
+Geodan.applicatieInit = function(){
+		
+}

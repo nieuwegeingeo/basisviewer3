@@ -1,0 +1,373 @@
+* {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+html, body {height: 100%; margin: 0; overflow: hidden;}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.shadow {
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16), 0px 3px 6px rgba(0,0,0,0.16);
+}
+
+/**************************
+    Openlayers Override
+**************************/
+
+
+.ol-control {
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+}
+
+.ol-zoom {
+    top: .5em;
+    left: .5em;
+}
+
+.ol-zoom .ol-zoom-in {
+border-radius: 2px 2px 0 0;
+
+}
+
+.ol-zoom .ol-zoom-out {
+    border-radius: 0 0 2px 2px ;
+}
+
+.ol-control button {
+    display: block;
+    margin: 1px;
+    padding: 0;
+    color: #842e93;
+    font-size: 1.14em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    height: 1.375rem;
+    width: 1.375rem;
+    line-height: .4rem;
+    background-color: white;
+    border: 1px solid #842e934d;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+ .ol-control button:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #842e934d;
+}
+
+/*    Attribution    */
+
+.ol-attribution {
+    text-align: right;
+    bottom: .5rem;
+    right: .5rem;
+    max-width: calc(100% - 1.3em)
+}
+
+.ol-attribution ul {
+    margin: 0;
+    padding: 0 .5rem;
+    font-size: .7rem;
+    line-height: 1.375em;
+    color: #000;
+    text-shadow: 0 0 2px #fff
+}
+
+.ol-attribution li {
+    display: inline;
+    list-style: none;
+    line-height: inherit
+}
+
+.ol-attribution li:not(:last-child):after {
+    content: " "
+}
+
+.ol-attribution img {
+    max-height: 2em;
+    max-width: inherit;
+    vertical-align: middle
+}
+
+.ol-attribution button,
+.ol-attribution ul {
+    display: inline-block
+}
+
+.ol-attribution.ol-collapsed ul {
+    display: none
+}
+
+.ol-attribution:not(.ol-collapsed) {
+    background: rgba(255, 255, 255, .8)
+}
+
+.ol-attribution.ol-uncollapsible {
+    bottom: 0;
+    right: 0;
+    border-radius: 4px 0 0;
+    height: 1.1em;
+    line-height: 1em
+}
+
+.ol-attribution.ol-uncollapsible img {
+    margin-top: -.2em;
+    max-height: 1.6em
+}
+
+.ol-attribution.ol-uncollapsible button {
+    display: none
+}
+
+/*************
+    Toolbar
+**************/
+
+.toolbar {
+    display: flex;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+/*    Baselayer Buttons    */
+
+.baselayer-button-container {
+    display: flex;
+    background-color: rgba(255,255,255,0.8);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.baselayer-button {
+    width: 5rem;
+    height:4rem;
+    background: white;
+    border: 2px solid #842e934d;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.baselayer-button.active {
+    border: 3px solid #842e934d;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.16);
+}
+
+.baselayer-button:hover {
+    border: 3px solid #842e934d;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.16);
+}
+
+.opentopo {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/opentopobtn.png');
+}
+
+.luchtfoto {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/luchtfotobtn.png');
+}
+
+/*******************
+    Feature Info
+********************/
+
+.featureinfo-popup {
+    position: absolute;
+    min-width: 8rem;
+    min-height: 8rem;
+    max-height: 90%;
+    background: white;
+    border: 1px solid #842e934d;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 80%;
+}
+
+.feature-summary {
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-left:1rem;
+    transition: background-color 70ms linear;
+}
+
+.feature-summary:hover {
+    background: #842e934d;
+}
+
+.feature-table {
+    width: 100%;
+    padding: 0.5rem 0;
+    user-select: text;
+}
+
+.feature-table tbody tr td {
+    padding-right: 0.5rem;
+}
+
+.feature-table tbody tr:nth-child(even) {
+    background: #eeeeee;
+}
+
+.sidebar .featureinfo-content {
+    background: white;
+    border: 1px solid #842e934d;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+/*************
+    Sidebar
+**************/
+
+.sidebar {
+    position: absolute;
+    top: 120px;
+    left: 0.5rem;
+    font-size: 80%;
+    transition: transform 0.2s linear;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.ol-control:not(.ol-collapsed) {
+    background-color: rgba(255, 255, 255, .8);
+    min-height: 50%;
+    max-height: 50%;
+    width: 18rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.sidebar.sidebar-in {
+    transform: translateX(-100%);
+}
+
+.sidebar.ol-collapsed .sidebar-head,
+.sidebar.ol-collapsed .sidebar-body {
+    display: none;
+}
+
+.sidebar:not(.ol-collapsed) .sidebar-head {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.3em;
+    line-height: 2.3em;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.sidebar:not(.ol-collapsed) .sidebar-button {
+    right: 2px;
+    position: absolute;
+}
+
+.sidebar.ol-collapsed .sidebar-button {
+    width: auto;
+    padding: 0 4px;
+}
+
+.sidebar-body {
+    position: relative;
+    top: 2rem;
+    left: 2px;
+    width: calc(100% - 4px);
+    padding: 0.2rem;
+    padding-bottom: 2rem;
+    overflow-y: scroll;
+}
+/***************
+    Scrollbar
+***************/
+
+::-webkit-scrollbar {
+    width:4px;
+}
+
+/* ::-webkit-scrollbar-button       {} */
+::-webkit-scrollbar-track        {
+    opacity: 0;
+}
+/* ::-webkit-scrollbar-track-piece  {} */
+::-webkit-scrollbar-thumb        {
+    height: 2rem;
+    width: 2px;
+    border-radius: 10px;
+    background: #842e934d;
+}
+/* ::-webkit-scrollbar-corner       {} */
+
+/***************************
+    Legend/downloadblock
+***************************/
+
+.extra-legend-container {
+    text-align: right;
+    bottom: .5em;
+    right: .5em;
+    max-width: calc(100% - 1.3em);
+    font-size: 80%;
+    padding: 0.2em;
+}
+
+.extra-legend-container.ol-collapsed .extra-legend {
+    display: none;
+}
+
+.extra-legend {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 10rem;
+    margin: 0.4rem 0;
+    background-color: white;
+    border: 1px solid #842e934d;
+    border-radius: 10px;
+}
+
+.ol-control .extra-legend-button {
+    width: auto;
+    padding: 0 4px;
+}
+
+.extra-legend-head {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.extra-legend-head:hover {
+    background-color: #842e934d;
+    border-radius: 8px;
+}
+
+.extra-legend-image {
+    max-height: unset;
+    max-width: unset;
+    align-self: flex-start;
+}
+
+.extra-legend-image.hidden {
+    display: none;
+}
+
+.extra-legend-container:not(.ol-collapsed) {
+    background: rgba(255, 255, 255, .8)
+}
+

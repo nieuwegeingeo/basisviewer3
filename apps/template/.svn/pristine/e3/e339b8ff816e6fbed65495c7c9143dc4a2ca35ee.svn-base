@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Gemeente Nieuwegein</title>
+  <link rel="stylesheet" href="/basisviewer2/lib/OpenLayers-2.12/theme/default/style.css" type="text/css" />
+  <link rel="stylesheet" href="/basisviewer2/theme/Website.css" type="text/css" />
+  <link rel="stylesheet" href="/basisviewer2/theme/style.css" type="text/css" />
+  <!-- openlayers includes -->
+  <script type="text/javascript" src="/basisviewer2/lib/OpenLayers.js"></script>
+  <script type="text/javascript" src="/basisviewer2/lib/proj4js.js"></script>
+  <script type="text/javascript" src="/basisviewer2/lib/jquery.min.js"></script>
+  <!-- voor geocoder -->
+  <link rel="stylesheet" href="/basisviewer2/lib/jquery-ui/css/ui-lightness/jquery-ui-1.8.13.custom.css"/>
+  <script type="text/javascript" src="/basisviewer2/lib/jquery-ui/js/jquery-ui-1.8.13.custom.min.js"></script>
+  <!-- geodan includes -->
+  <script type="text/javascript" src="/basisviewer2/lib/tools.js"></script>
+  <script type="text/javascript" src="/basisviewer2/lib/Geodan.js"></script>
+  <!-- viewer includes -->
+  <script type="text/javascript" src="settings.js"></script>
+  <script type="text/javascript" src="/basisviewer2/viewer.js"></script>
+  <script>
+	if( isAndroid || isMobile || isIthing ) {
+		document.write('<link rel="stylesheet" href="theme/mobile.css" type="text/css" />');
+	}
+  </script>
+  </head>
+
+  <body onload="Geodan.init()">
+    <div id="topbar"></div>
+    <div id="map" style="width: 100%; height: 550px"></div>
+    <div id="bottombar"></div>
+  </body>
+</html>

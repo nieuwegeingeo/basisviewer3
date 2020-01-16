@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/tab_style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/sidebar_style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/infopage_style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../basisviewer2/combi_app/style/mobile.css" type="text/css" />
+
+    <!--    <script type="text/javascript" src="../../../../basisviewer2/lib/jquery-ui/js/jquery-1.10.2.min.js"></script>-->
+    <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery.js"></script>
+    <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/tabs.js"></script>
+    <title id="pageTitle">Klimaatadaptatie</title>
+</head>
+
+<body class="main-page">
+
+
+    <header class="top-bar shadow">
+        <a class="homebutton" href="https://www.nieuwegein.nl/klimaatadaptatie/"><img src="./img/home.svg"></a>
+        <div class="container">
+            <ul class="tab-links">
+                <li class="active"><a href="#tab0">Introductie</a></li>
+                <li><a href="#tab1">Klimaatvisie</a></li>
+                <li><a href="#tab2">Inspiratieboek</a></li>
+                <li><a href="#tab3">Wateroverlast</a></li>
+                <li><a href="#tab4">Hitte</a></li>
+                <li><a href="#tab5">Droogte</a></li>
+                <li><a href="#tab6">Waterveiligheid</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="tab-content">
+
+            <div id="tab0" class="tab active">
+                <iframe id="tabkaart_tab0" class="tab-frame" src="./pages/intro_page.html"></iframe>
+            </div>
+
+            <div id="tab1" class="tab">
+                <iframe id="tabkaart_tab1" class="tab-frame" src=""
+                    srcc="https://www.nieuwegein.nl/fileadmin/bestanden/Inwoner/Projecten/Klimaatadaptatie/Visie_klimaatadaptatie.pdf"></iframe>
+                <!--<object id="tabkaart_tab1" class="tab-frame" data= "" datax="./download/Visie_klimaatadaptatie.pdf#view=fit"></object>-->
+            </div>
+
+            <div id="tab2" class="tab">
+                <iframe id="tabkaart_tab2" class="tab-frame" height="500px" src=""
+                    srcc="https://indd.adobe.com/view/a7f4a99e-275a-400d-875c-c5ac5ca79b27"></iframe>
+            </div>
+
+            <div id="tab3" class="tab">
+                <iframe id="tabkaart_tab3" class="tab-frame" src="" srcc="./maps/wateroverlast/index.html"></iframe>
+            </div>
+
+            <div id="tab4" class="tab">
+                <iframe id="tabkaart_tab4" class="tab-frame" src="" srcc="./maps/hitte/index.html"></iframe>
+            </div>
+
+            <div id="tab5" class="tab">
+                <iframe id="tabkaart_tab5" class="tab-frame" src="" srcc="./maps/droogte/index.html"></iframe>
+            </div>
+
+            <div id="tab6" class="tab">
+                <iframe id="tabkaart_tab6" class="tab-frame" src="" srcc="./maps/waterveiligheid/index.html"></iframe>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../../../../basisviewer2/combi_app/lib/jquery.details.min.js"></script>
+
+</body>
+
+</html>
