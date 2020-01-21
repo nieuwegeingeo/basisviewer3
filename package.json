@@ -9,10 +9,8 @@
   "dependencies": {
     "ol": "^6.1.1",
     "proj4": "^2.6.0"
-
   },
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
     "parcel": "^1.12.4"
   },
   "scripts": {
