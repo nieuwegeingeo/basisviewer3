@@ -11,6 +11,7 @@ GeoApp.applicatieSettings = {
   //       opacity: 0.4,
   //     }
   //   },
+  //
   //   {
   //     title: 'Luchtfoto',
   //     url: 'http://geodev.nieuwegein.nl/mapproxy/service',
