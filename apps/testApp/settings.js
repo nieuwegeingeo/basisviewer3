@@ -25,7 +25,7 @@ GeoApp.applicatieSettings = {
   // ],
 
 
-  overLays: [
+  overlays: [
     // Definitie van een WFS-laag //
     {
       type: 'wfs',
@@ -53,43 +53,17 @@ GeoApp.applicatieSettings = {
       }
     },
 
+    // Definitie van een WMTS-laag //
     {
-      type: 'wms',
-      title: 'Speellocaties Buurten',
-      url: 'http://geodev.nieuwegein.nl/geoserver/wms',
-      params: {
-        layers: 'nieuwegein:speellocaties_buurten_app',
-        format: 'image/png',
-        buffer: 5
-      },
-      options: {
-        singleTile: true,
-        visible: true,
-        displayInLayerSwitcher: false,
-        wmsinfoformat: 'application/vnd.ogc.gml', //'application/vnd.ogc.gml', // text/plain, application/vnd.ogc.gml, application/vnd.ogc.gml/3.1.1, text/html
-        fields: {
-          'nieuwegein:speellocaties_buurten_app': {
-            'TYPE': 'Type',
-            'SPEELBUURT': 'Speelbuurt',
-            'AANTAL_SPEELLOCATIES': 'Aantal Speellocaties',
-          }
-        },
-        legend: true,
-        // hideInLayerManager: true,
-        //dowloadformat: 'excel',
-        /*styles: [
-                    {name:'Meldingen', style:'mor_data_2018_style'},
-                    {name:'Heatmap', style:'mor_data_2018_heatmap_style'},
-                ],*/
-        filter: [{
-          'SPEELBUURT': {
-            'TITLE': 'Speelbuurt',
-            'TYPE':'TEXT',
-          }
-        }],
-      },
-      // attribution: 'Test attribution',
+      type: 'wmts',
+      title: 'OpenTopo NGR',
+      url: 'https://geodata.nationaalgeoregister.nl/tiles/service/wmts',
+      layer: 'opentopoachtergrondkaart',
+      matrixSet: 'EPSG:28992',
+      format: 'image/png',
     },
+
+    // Definitie van een WMS-laag //
     {
       type: 'wms',
       title: 'Speellocaties',
@@ -100,8 +74,8 @@ GeoApp.applicatieSettings = {
         buffer: 10
       },
       options: {
+        // WMS featureinfo, alleen application gml werkt voor nu //
         // wmsinfoformat: 'application/vnd.ogc.gml', // text/plain, application/vnd.ogc.gml, application/vnd.ogc.gml/3.1.1, text/html
-        singleTile: true,
         fields: {
           'nieuwegein:speellocaties_locaties_app': {
             'SPNR': 'Sp-nummer',
@@ -116,7 +90,8 @@ GeoApp.applicatieSettings = {
             'ADVIES_MAATREGELEN': 'Advies Maatregelen',
           }
         },
-
+        // Single tile, default is multi tile //
+        singleTile: true,
         // De URL voor de legenda voor het tonen in de layerswitcher //
         legend: 'http://geodev.nieuwegein.nl/ol6/apps/projectenkaart/',
         // Regelt of de legenda mee schaalt met kaartschaal //
