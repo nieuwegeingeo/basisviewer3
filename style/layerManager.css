@@ -218,6 +218,7 @@
     height: 8rem;
     background: white;
     padding: 0.4rem;
+    font-size: 80%;
 }
 
 .ol-control button.filter-button {
@@ -236,7 +237,20 @@
     width: 100%;
     justify-content: space-around;
 }
+.filter-title {
+    font-weight: bold;
+    text-align: center;
+}
+.filter-item {
+    display: flex;
+    justify-content: space-between;
+}
 
+.filter-input-text {
+    border: 1px solid #842e934d;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+}
 /* .filter-button-confirm {
 
 }

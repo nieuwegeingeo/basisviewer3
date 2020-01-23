@@ -88,11 +88,12 @@ GeoApp.applicatieSettings = {
       params: {
         layers: 'nieuwegein:speellocaties_locaties_app',
         format: 'image/png',
-        buffer: 10
+        buffer: 10,
+        cql_filter: "SPEELBUURT like '%Prelude%'"
       },
       options: {
         // WMS featureinfo, alleen application gml werkt voor nu //
-        // wmsinfoformat: 'application/vnd.ogc.gml', // text/plain, application/vnd.ogc.gml, application/vnd.ogc.gml/3.1.1, text/html
+        wmsinfoformat: 'application/vnd.ogc.gml', // text/plain, application/vnd.ogc.gml, application/vnd.ogc.gml/3.1.1, text/html
         fields: {
           'nieuwegein:speellocaties_locaties_app': {
             'SPNR': 'Sp-nummer',
@@ -127,6 +128,10 @@ GeoApp.applicatieSettings = {
         filter: [{
           'SPEELBUURT': {
             'TITLE': 'Speelbuurt',
+            'TYPE':'TEXT',
+          },
+          'BEHEERNUMMER': {
+            'TITLE': 'Beheernummer',
             'TYPE':'TEXT',
           }
         }],
