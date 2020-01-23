@@ -1,28 +1,35 @@
 GeoApp.applicatieSettings = {
-  // baseLayers: [
-  //   {
-  //     title: 'OpenTopo',
-  //     url: 'http://geodev.nieuwegein.nl/mapproxy/service',
-  //     params: {
-  //       layers: 'opentopo',
-  //       format: 'image/png'
-  //     },
-  //     options: {
-  //       opacity: 0.4,
-  //     }
-  //   },
-  //
-  //   {
-  //     title: 'Luchtfoto',
-  //     url: 'http://geodev.nieuwegein.nl/mapproxy/service',
-  //     params: {
-  //       layers: 'basisluchtfoto',
-  //       format: 'image/png'
-  //     },
-  //     options: {
-  //     }
-  //   },
-  // ],
+  baseLayers: [
+    {
+      type: 'wmts-capabilities',
+      title: 'OpenTopo',
+      url: 'http://geodev.nieuwegein.nl/mapproxy/service?REQUEST=GetCapabilities&SERVICE=WMTS',
+      layer: 'opentopo',
+      matrixSet: 'EPSG:28992',
+      format: 'image/png',
+      options: {isBaseLayer: true}
+    },
+    {
+      type: 'wmts-capabilities',
+      title: 'Luchtfoto',
+      url: 'http://geodev.nieuwegein.nl/mapproxy/service?REQUEST=GetCapabilities&SERVICE=WMTS',
+      layer: 'basisluchtfoto',
+      matrixSet: 'EPSG:28992',
+      format: 'image/png',
+      options: {isBaseLayer: true}
+    },
+
+    // {
+    //   type: 'wms',
+    //   title: 'Luchtfoto',
+    //   url: 'http://geodev.nieuwegein.nl/mapproxy/service',
+    //   params: {
+    //     layers: 'basisluchtfoto',
+    //     format: 'image/png'
+    //   },
+    //   options: {isBaseLayer: true}
+    // },
+  ],
 
 
   overlays: [
@@ -53,15 +60,25 @@ GeoApp.applicatieSettings = {
       }
     },
 
-    // Definitie van een WMTS-laag //
-    {
-      type: 'wmts',
-      title: 'OpenTopo NGR',
-      url: 'https://geodata.nationaalgeoregister.nl/tiles/service/wmts',
-      layer: 'opentopoachtergrondkaart',
-      matrixSet: 'EPSG:28992',
-      format: 'image/png',
-    },
+    // Definitie van een WMTS-laag geparsed uit capabilities //
+    // {
+    //   type: 'wmts-capabilities',
+    //   title: 'OpenTopo NGR',
+    //   url: 'https://geodata.nationaalgeoregister.nl/tiles/service/wmts?request=getcapabilities',
+    //   layer: 'opentopoachtergrondkaart',
+    //   matrixSet: 'EPSG:28992',
+    //   format: 'image/png',
+    //   visibility: false,
+    // },
+    // {
+    //   type: 'wmts-capabilities',
+    //   title: 'OpenTopo Mapproxy',
+    //   url: 'http://geodev.nieuwegein.nl/mapproxy/service?REQUEST=GetCapabilities&SERVICE=WMTS',
+    //   layer: 'opentopo',
+    //   matrixSet: 'EPSG:28992',
+    //   format: 'image/png',
+    //   visibility: false,
+    // },
 
     // Definitie van een WMS-laag //
     {
