@@ -1,15 +1,24 @@
 GeoApp.applicatieSettings = {
   baseLayers: [
+    // {
+    //   type: 'wmts-capabilities',
+    //   title: 'OpenTopo',
+    //   url: 'http://geodev.nieuwegein.nl/mapproxy/service?',
+    //   layer: 'opentopo',
+    //   matrixSet: 'EPSG:28992',
+    //   format: 'image/png',
+    //   options: {isBaseLayer: true}
+    // },
     {
-      type: 'wmts-capabilities',
+      type: 'wms',
       title: 'OpenTopo',
-      url: 'http://geodev.nieuwegein.nl/mapproxy/service?',
-      layer: 'opentopo',
-      matrixSet: 'EPSG:28992',
-      format: 'image/png',
+      url: 'http://geodev.nieuwegein.nl/mapproxy/service',
+      params: {
+        layers: 'opentopo',
+        format: 'image/png'
+      },
       options: {isBaseLayer: true}
     },
-
     {
       type: 'wms',
       title: 'Luchtfoto',
@@ -20,6 +29,7 @@ GeoApp.applicatieSettings = {
       },
       options: {isBaseLayer: true}
     },
+
   ],
 
 
@@ -59,7 +69,7 @@ GeoApp.applicatieSettings = {
       layer: 'opentopoachtergrondkaart',
       matrixSet: 'EPSG:28992',
       format: 'image/png',
-      visibility: true,
+      visibility: false,
     },
     // {
     //   type: 'wmts-capabilities',
