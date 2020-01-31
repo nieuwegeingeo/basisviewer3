@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "parcel index.html settings.js",
+    "run": "parcel index.html settings.js",
     "build": "parcel build --no-content-hash --experimental-scope-hoisting --public-url . index.html settings.js"
   },
   "keywords": [],
