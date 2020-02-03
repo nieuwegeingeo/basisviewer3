@@ -265,7 +265,7 @@
     font-weight: bold;
 }
 
-.filter-input-text {
+.filter-input-text, .filter-input-select {
     border: 1px solid #842e934d;
     border-radius: 3px;
     margin-left: 0.5rem;

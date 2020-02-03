@@ -152,11 +152,12 @@ GeoApp.applicatieSettings = {
         // Verbergt de laag in de layerswitcher //
         hideInLayerManager: false,
 
-        // Maak een filter voor de laag //
+        // Create filter for the layer //
         filter: [{
-          'SPEELBUURT': {
-            'TITLE': 'Speelbuurt',
-            'TYPE':'TEXT',
+          'SPEELBUURT': {           // Set filter Field //
+            'TITLE': 'Speelbuurt',  // Set filter title //
+            'TYPE':'TEXT',          // Set filter type //
+            'VALUE': 'Prelude',     // Set a base value //
           },
           'BEHEERNUMMER': {
             'TITLE': 'Beheernummer',
@@ -168,11 +169,28 @@ GeoApp.applicatieSettings = {
           },
           'HUIDIGE_CATEGORIE': {
             'TITLE': 'Huidige Categorie',
-            'TYPE':'CHECKBOX',
+            'TYPE':'SELECT',
             'OPTIONS': [
+              {value: 'geen',title:'Geen', isnull: true},
+              {value: 'informeel',title:'Informeel'},
               {value: '0 t/m 5 jaar',title:'0 t/m 5 jaar'},
               {value: '0 t/m 11 jaar',title:'0 t/m 11 jaar'},
-              {value: '12 t/m 18 jaar',title:'12 t/m 18 jaar'},
+              {value: '0 t/m 18 jaar',title:'0 t/m 18 jaar'},
+              {value: '6 t/m 11 jaar',title:'6 t/m 11 jaar'},
+              {value: '6 t/m 18 jaar',title:'6 t/m 18 jaar'},
+              {value: '12 t/m 18 jaar',title:'12 t/m 18 jaar', selected:true}, // Selected sets this as the base value //
+              {value: 'ouder dan 18',title:'Ouder dan 18'},
+            ]
+          },
+          'TYPE_ONTMOETING': {
+            'TITLE': 'Type ontmoeting',
+            'TYPE':'CHECKBOX',
+            'OPTIONS': [
+              {value: 'geen', title:'Geen', isnull:true}, // Isnull makes sure that database NULL values are added to this checkbox's value //
+              {value: 'No Problem',title:'No Problem', selected: true},
+              {value: 'Stay Around',title:'Stay Around', selected: true}, // Selected checks the checkbox //
+              {value: 'What\'\'s Up',title:'What\'s Up'}, // Apostrophe has to be escaped with \ and needs an extra ' for the CQL to work so: ' becomes \'\' //
+
             ]
           },
 
