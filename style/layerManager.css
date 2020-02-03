@@ -228,7 +228,7 @@
 }
 
 .layer-filter {
-    height: 8rem;
+    height: auto;
     background: white;
     padding: 0.4rem;
     font-size: 80%;
@@ -250,6 +250,10 @@
     width: 100%;
     justify-content: space-around;
 }
+.filter-body {
+    padding-bottom: 2rem;
+}
+
 .filter-title {
     font-weight: bold;
     text-align: center;
@@ -263,6 +267,17 @@
     border: 1px solid #842e934d;
     border-radius: 3px;
     margin-left: 0.5rem;
+}
+
+.and_or_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.5rem;
+}
+
+.and_or_container input {
+    margin: 0.5rem;
 }
 /* .filter-button-confirm {
 

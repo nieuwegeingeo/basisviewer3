@@ -1,15 +1,15 @@
 GeoApp.applicatieSettings = {
-	overLays: [
+	overlays: [
 		{
 			type: 'wms',
 			disabled: false,
 			title: 'Gebieden met uitlaatvoorwaarden',
-			url: 'http://geodev.nieuwegein.nl/geoserver/wms',
+			url: "//" + location.host + '/geoserver/wms',
 			params: {
 				layers: 'nieuwegein:hondenuitlaatkaart_gebieden_app'
 			},
 			options: {
-				wmsinfoformat: 'application/vnd.ogc.gml',
+				//wmsinfoformat: 'application/vnd.ogc.gml',
 				singleTile: true,
 				visible: true
 			}
@@ -18,8 +18,7 @@ GeoApp.applicatieSettings = {
 			type: 'wms',
 			disabled: false,
 			title: 'Honden afvalbak',
-			url: 'http://geodev.nieuwegein.nl/geoserver/wms',
-
+			url: "//" + location.host + '/geoserver/wms',
 			params: {
 				layers: 'nieuwegein:hondenuitlaatkaart_afvalbak_app'
 			},
@@ -46,6 +45,11 @@ GeoApp.applicatieSettings = {
 	],
 
 	layerManager: true,
+
+    // Activate sidebar en verberg //
+	sidebar: true,
+	sidebarHide: true,
+
 };
 
 GeoApp.applicatieInit = function () {
