@@ -235,38 +235,45 @@
 }
 
 .ol-control button.filter-button {
-
     width: auto;
     padding: 0 4px;
-
     font-size: 80%;
+    pointer-events: all;
 }
 
 .filter-button-container {
     display: flex;
-    position: absolute;
-    right: 0;
-    bottom: 4px;
+    margin: 0.7rem 0 0.5rem 0;
     width: 100%;
     justify-content: space-around;
+    pointer-events: none;
 }
 .filter-body {
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
 }
 
 .filter-title {
     font-weight: bold;
     text-align: center;
 }
-.filter-item {
+.filter-item, .filter-checkbox-label {
     display: flex;
     justify-content: space-between;
+}
+
+.filter-item-title {
+    font-weight: bold;
 }
 
 .filter-input-text {
     border: 1px solid #842e934d;
     border-radius: 3px;
     margin-left: 0.5rem;
+}
+
+.filter-checkbox-label {
+    margin-bottom: 0.1rem;
+    cursor: pointer;
 }
 
 .and_or_container {
@@ -279,6 +286,12 @@
 .and_or_container input {
     margin: 0.5rem;
 }
+
+.and_or_container.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
 /* .filter-button-confirm {
 
 }

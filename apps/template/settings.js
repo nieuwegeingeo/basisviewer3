@@ -115,7 +115,7 @@ GeoApp.applicatieSettings = {
         layers: 'nieuwegein:speellocaties_locaties_app',
         format: 'image/png',
         buffer: 10,
-        cql_filter: "SPEELBUURT like '%Prelude%'"
+        //cql_filter: "SPEELBUURT like '%Prelude%'"
       },
       options: {
         // WMS featureinfo, alleen application gml werkt voor nu //
