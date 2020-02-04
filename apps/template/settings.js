@@ -157,7 +157,7 @@ GeoApp.applicatieSettings = {
           'SPEELBUURT': {           // Set filter Field //
             'TITLE': 'Speelbuurt',  // Set filter title //
             'TYPE':'TEXT',          // Set filter type //
-            'VALUE': 'Prelude',     // Set a base value //
+            //'VALUE': 'Prelude',     // Set a base value //
           },
           'BEHEERNUMMER': {
             'TITLE': 'Beheernummer',
@@ -178,7 +178,7 @@ GeoApp.applicatieSettings = {
               {value: '0 t/m 18 jaar',title:'0 t/m 18 jaar'},
               {value: '6 t/m 11 jaar',title:'6 t/m 11 jaar'},
               {value: '6 t/m 18 jaar',title:'6 t/m 18 jaar'},
-              {value: '12 t/m 18 jaar',title:'12 t/m 18 jaar', selected:true}, // Selected sets this as the base value //
+              {value: '12 t/m 18 jaar',title:'12 t/m 18 jaar'}, //, selected: true}, // Selected sets this as the base value //
               {value: 'ouder dan 18',title:'Ouder dan 18'},
             ]
           },
@@ -208,7 +208,7 @@ GeoApp.applicatieSettings = {
   sidebarHide: true,
 
   // Set default zoom, center en extent //
-  mapZoom: 7,
+  mapZoom: 4,
   mapCenter: [135089.1, 448762.5],
   //extent: [],
 
