@@ -324,7 +324,9 @@
     background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_off.svg');
 }
 
-
 .layer-edit-button.edit-on {
     background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_on.svg');
 }
+
+
+

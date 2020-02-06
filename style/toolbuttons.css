@@ -1,0 +1,60 @@
+/*************
+    Toolbar
+**************/
+
+.toolbar {
+    display: flex;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+}
+
+/*    Baselayer Buttons    */
+
+.button-container {
+    display: flex;
+    background-color: rgba(255,255,255,0.8);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.tool-button {
+    width: 5rem;
+    height:4rem;
+    background: white;
+    border: 2px solid #842e934d;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.baselayer-button.active {
+    border: 3px solid #842e934d;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.16);
+}
+
+.baselayer-button:hover {
+    border: 3px solid #842e934d;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.16);
+}
+
+.opentopo {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/opentopobtn.png');
+}
+
+.luchtfoto {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/luchtfotobtn.png');
+}
+
+/*    Edit Buttons    */
+
+.draw-feature-button {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_on.svg');
+}
+
+.edit-feature-button {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_on.svg');
+}
