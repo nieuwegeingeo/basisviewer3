@@ -185,9 +185,9 @@
     color: white;
     line-height: 1rem;
     /* background: red; */
-
     background-position: center;
 }
+
 .layer-filter-button {
     cursor: pointer;
 }
@@ -299,3 +299,32 @@
 .filter-button-cancel {
 
 } */
+
+/*****************
+    Layer Edit
+*****************/
+
+.layer-edit-button, .edit-filler {
+    width: 1.2rem;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    padding: 0.1rem;
+    margin-right: 0.4rem;
+    color: white;
+    line-height: 1rem;
+    /* background: red; */
+    background-position: center;
+}
+
+.layer-edit-button {
+    cursor: pointer;
+}
+
+.layer-edit-button:not(.edit-on) {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_off.svg');
+}
+
+
+.layer-edit-button.edit-on {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_on.svg');
+}

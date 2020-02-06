@@ -104,6 +104,7 @@ GeoApp.applicatieSettings = {
         }],
         legend: true,
         visible: true,
+        editable: true,
       }
     },
     // Definitie van een WMS-laag //
@@ -193,9 +194,10 @@ GeoApp.applicatieSettings = {
 
             ]
           },
-
         }],
+        editable: true,
       },
+
       serverType: 'geoserver',
     },
   ],
