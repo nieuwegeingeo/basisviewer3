@@ -163,6 +163,8 @@ border-radius: 2px 2px 0 0;
 
 .feature-table tbody tr td {
     padding-right: 0.5rem;
+    word-break: break-word;
+    width: 50%;
 }
 
 .feature-table tbody tr:nth-child(even) {
@@ -199,8 +201,15 @@ border-radius: 2px 2px 0 0;
     overflow-x: hidden;
 }
 
-.sidebar.sidebar-in {
+/* .sidebar.sidebar-in {
     transform: translateX(-100%);
+} */
+
+.sidebar.ol-collapsed button:after {
+    content: 'Informatie';
+}
+.sidebar:not(.ol-collapsed) button:after {
+    content: '◀';
 }
 
 .sidebar.ol-collapsed .sidebar-head,
@@ -241,6 +250,7 @@ border-radius: 2px 2px 0 0;
     padding: 0.2rem;
     padding-bottom: 2rem;
     overflow-y: scroll;
+    overflow-y: hidden;
 }
 /***************
     Scrollbar

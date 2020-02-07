@@ -18,6 +18,12 @@
     width: auto;
     padding: 0 4px;
 }
+.ol-control.ol-collapsed button.layermanager-button:after {
+    content: 'Lagen';
+}
+.layermanager-container:not(.ol-collapsed) button.layermanager-button:after {
+    content: '▶'
+}
 
 .layermanager-arrow {
     font-size: 2rem;
