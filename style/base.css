@@ -190,6 +190,7 @@ border-radius: 2px 2px 0 0;
     transition: transform 0.2s linear;
     display: flex;
     flex-direction: column;
+
 }
 
 .sidebar.ol-control:not(.ol-collapsed) {
@@ -199,6 +200,7 @@ border-radius: 2px 2px 0 0;
     width: 18rem;
     overflow-y: hidden;
     overflow-x: hidden;
+    padding-bottom: 2rem;
 }
 
 /* .sidebar.sidebar-in {
@@ -250,7 +252,7 @@ border-radius: 2px 2px 0 0;
     padding: 0.2rem;
     padding-bottom: 2rem;
     overflow-y: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 /***************
     Scrollbar
@@ -331,3 +333,82 @@ border-radius: 2px 2px 0 0;
     background: rgba(255, 255, 255, .8)
 }
 
+/***********
+    WFST
+***********/
+
+
+.wfst-container:not(.ol-collapsed ){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    width: auto;
+    height: 10rem;
+}
+
+.wfst-container-dragbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+}
+
+.wfst-container-dragbar:hover {
+    background: #842e931f;
+}
+
+.layer-wfst-button, .wfst-filler {
+    width: 1.2rem;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    padding: 0.1rem;
+    margin-right: 0.4rem;
+    color: white;
+    line-height: 1rem;
+    /* background: red; */
+    background-position: center;
+}
+
+.layer-wfst-button {
+    cursor: pointer;
+}
+
+.filter-container.ol-collapsed, .layer-wfst.ol-collapsed {
+    display: none;
+}
+
+
+.layer-wfst {
+    height: auto;
+    background: white;
+    padding: 0.4rem;
+    font-size: 80%;
+}
+
+.ol-control button.wfst-button {
+    width: auto;
+    padding: 0 4px;
+    font-size: 80%;
+    pointer-events: all;
+}
+
+.wfst-button-container {
+    display: flex;
+    margin: 0.7rem 0 0.5rem 0;
+    width: 100%;
+    justify-content: space-around;
+    pointer-events: none;
+}
+.wfst-body {
+    padding-bottom: 0.5rem;
+}
+
+.wfst-title {
+    font-weight: bold;
+    text-align: center;
+}

@@ -86,7 +86,8 @@ GeoApp.applicatieSettings = {
       title: 'Projectenkaart',
       url: 'http://geodev.nieuwegein.nl/geoserver/wms',
       params: {
-        layers: 'nieuwegein:projectenkaart_app',
+        layers: 'nieuwegein:projectenkaart_edit_app',
+        styles: 'projectenkaart_groep_app',
         format: 'image/png',
         buffer: 10,
       },
@@ -104,7 +105,24 @@ GeoApp.applicatieSettings = {
         }],
         legend: true,
         visible: true,
-        editable: true,
+        editable: [{
+          'FID': {
+            'TITLE': 'FID',
+            'TYPE':'ID',
+          },
+          'PROJECTCODE': {
+            'TITLE': 'Projectcode',
+            'TYPE':'TEXT',
+          },
+          'OMSCHRIJVING': {
+            'TITLE': 'Omschrijving',
+            'TYPE':'TEXT',
+          },
+          'GEOM': {
+            'TITLE': 'GEOM',
+            'TYPE':'GEOMETRY',
+          }
+        }],
       }
     },
     // Definitie van een WMS-laag //
@@ -195,7 +213,7 @@ GeoApp.applicatieSettings = {
             ]
           },
         }],
-        editable: true,
+        //editable: true,
       },
 
       serverType: 'geoserver',
@@ -226,8 +244,11 @@ GeoApp.applicatieSettings = {
   ],
   legendHide: true,
 
-  // Forceert featureinfo popup ondanks Sidebar settings //
-  forceInfoPopup: false,
+  // Force Authorisation by for example connecting to a secure Geoserver layer //
+  authorisation: {
+    serverUrl: 'http://geodev.nieuwegein.nl/geoserver',
+    layerName: 'projectenkaart_edit_app'
+  },
 };
 
 // Extra uit te voeren Javascript code //

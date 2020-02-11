@@ -50,11 +50,28 @@
 }
 
 /*    Edit Buttons    */
+.edit-buttons {
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.5rem;
+    background-size: cover;
+    background-origin: content-box;
+}
 
-.draw-feature-button {
-    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_on.svg');
+.draw-feature-button.draw-point {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/new_point.svg');
+}
+.draw-feature-button.draw-polyline {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/new_polyline.svg');
+}
+.draw-feature-button.draw-polygon {
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/new_polygon.svg');
 }
 
 .edit-feature-button {
-    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit_on.svg');
+    background-image: url('http://geodev.nieuwegein.nl/ol6/dist/img/edit-feature.svg');
+}
+
+.edit-buttons.tool-active {
+    background-color: #842e9320;
 }
