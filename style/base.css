@@ -346,6 +346,7 @@ border-radius: 2px 2px 0 0;
     transform: translate(-50%,-50%);
     z-index: 10;
     width: auto;
+    max-width: 30rem;
     height: auto;
     max-height: 90%;
 }
@@ -373,7 +374,6 @@ border-radius: 2px 2px 0 0;
     margin-right: 0.4rem;
     color: white;
     line-height: 1rem;
-    /* background: red; */
     background-position: center;
 }
 
@@ -434,8 +434,7 @@ border-radius: 2px 2px 0 0;
     border: 1px solid #842e934d;
     border-radius: 3px;
     margin-left: 0.5rem;
-    min-width: 12rem;
-
+    width: 80%;
 }
 
 .wfst-checkbox-label {
@@ -446,4 +445,12 @@ border-radius: 2px 2px 0 0;
 .wfst-input-textarea {
     height: 4rem;
     font-family: Roboto, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    width: 100%;
+    flex-basis: auto;
 }

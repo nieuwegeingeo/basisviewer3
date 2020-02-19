@@ -120,6 +120,7 @@ GeoApp.applicatieSettings = {
             'TYPE':'TEXTAREA',
             // 'VALUE': 'Bla Bla Bla'
           },
+
           'HOOFDGROEP': {
             'TITLE': 'Hoofdgroep',
             'TYPE':'SELECT',
@@ -131,6 +132,9 @@ GeoApp.applicatieSettings = {
               {value: 'Wijkcoordinatoren',title:'Wijkcoordinatoren'},
             ]
           },
+
+          // 'SECTION-1-1': {CONTENT: '<table><tbody><tr><td>',TYPE: 'ELEMENT'},
+
           'RD_PROG_SOORTEN_GEBOUWEN':{
             TITLE: 'Soorten gebouwen',
             TYPE: 'CHECKBOX',
@@ -146,6 +150,9 @@ GeoApp.applicatieSettings = {
               {value:'Woningen', title:'Woningen'},
             ]
           },
+
+          // 'SECTION-1-2': {CONTENT: '</td><td>',TYPE: 'ELEMENT'},
+
           'RD_PROG_DOELGROEP':{
             TITLE: 'Doelgroep',
             TYPE: 'CHECKBOX',
@@ -157,6 +164,7 @@ GeoApp.applicatieSettings = {
               {value:'Zorgwoningen', title:'Zorgwoningen'},
             ]
           },
+          // 'SECTION-1-3': {CONTENT: '</td></tr></tbody></table>',TYPE: 'ELEMENT'},
           'GEOM': {
             'TITLE': 'GEOM',
             'TYPE':'GEOMETRY',
