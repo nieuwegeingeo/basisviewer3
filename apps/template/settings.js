@@ -105,7 +105,7 @@ GeoApp.applicatieSettings = {
         }],
         legend: true,
         visible: true,
-        editable: [{
+        wfstEdit: [{
           'FID': {
             'TITLE': 'FID',
             'TYPE':'ID',
@@ -113,10 +113,49 @@ GeoApp.applicatieSettings = {
           'PROJECTCODE': {
             'TITLE': 'Projectcode',
             'TYPE':'TEXT',
+            //'DISABLED': true,
           },
           'OMSCHRIJVING': {
             'TITLE': 'Omschrijving',
-            'TYPE':'TEXT',
+            'TYPE':'TEXTAREA',
+            // 'VALUE': 'Bla Bla Bla'
+          },
+          'HOOFDGROEP': {
+            'TITLE': 'Hoofdgroep',
+            'TYPE':'SELECT',
+            'OPTIONS': [
+              {value: '',title:''},
+              {value: 'Openbaar Domein',title:'Openbaar Domein'},
+              {value: 'Ruimtelijk Domein',title:'Ruimtelijk Domein'},
+              {value: 'Sociaal Domein',title:'Sociaal Domein'},
+              {value: 'Wijkcoordinatoren',title:'Wijkcoordinatoren'},
+            ]
+          },
+          'RD_PROG_SOORTEN_GEBOUWEN':{
+            TITLE: 'Soorten gebouwen',
+            TYPE: 'CHECKBOX',
+            OPTIONS: [
+              {value:'Buurthuis', title:'Buurthuis'},
+              {value:'Culturele functie', title:'Culturele functie'},
+              {value:'Detailhandel', title:'Detailhandel'},
+              {value:'Fabriek', title:'Fabriek'},
+              {value:'Infrastructuur', title:'Gebouw voor infrastructuur'},
+              {value:'Kantoorgebouw', title:'Kantoorgebouw'},
+              {value:'Opslag', title:'Opslag'},
+              {value:'Religieus gebouw', title:'Religieus gebouw'},
+              {value:'Woningen', title:'Woningen'},
+            ]
+          },
+          'RD_PROG_DOELGROEP':{
+            TITLE: 'Doelgroep',
+            TYPE: 'CHECKBOX',
+            OPTIONS: [
+              {value:'Niet van toepassing', title:'Niet van toepassing'},
+              {value:'Seniorenwoningen', title:'Seniorenwoningen'},
+              {value:'Starterswoningen', title:'Starterswoningen'},
+              {value:'Stijgers', title:'Stijgers'},
+              {value:'Zorgwoningen', title:'Zorgwoningen'},
+            ]
           },
           'GEOM': {
             'TITLE': 'GEOM',

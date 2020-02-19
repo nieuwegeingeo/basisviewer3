@@ -336,7 +336,9 @@ border-radius: 2px 2px 0 0;
 /***********
     WFST
 ***********/
-
+.edit-buttons-container.disabled {
+    pointer-events: none;
+}
 
 .wfst-container:not(.ol-collapsed ){
     top: 50%;
@@ -344,7 +346,8 @@ border-radius: 2px 2px 0 0;
     transform: translate(-50%,-50%);
     z-index: 10;
     width: auto;
-    height: 10rem;
+    height: auto;
+    max-height: 90%;
 }
 
 .wfst-container-dragbar {
@@ -404,6 +407,7 @@ border-radius: 2px 2px 0 0;
     justify-content: space-around;
     pointer-events: none;
 }
+
 .wfst-body {
     padding-bottom: 0.5rem;
 }
@@ -411,4 +415,35 @@ border-radius: 2px 2px 0 0;
 .wfst-title {
     font-weight: bold;
     text-align: center;
+}
+
+.wfst-input-id {
+    display: none;
+}
+
+.wfst-item, .wfst-checkbox-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wfst-item-title {
+    font-weight: bold;
+}
+
+.wfst-input-text, .wfst-input-select, .wfst-input-textarea {
+    border: 1px solid #842e934d;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    min-width: 12rem;
+
+}
+
+.wfst-checkbox-label {
+    margin-bottom: 0.1rem;
+    cursor: pointer;
+}
+
+.wfst-input-textarea {
+    height: 4rem;
+    font-family: Roboto, sans-serif;
 }
