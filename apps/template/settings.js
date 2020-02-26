@@ -260,7 +260,25 @@ GeoApp.applicatieSettings = {
             ]
           },
         }],
-        //editable: true,
+        wfstEdit: [{
+          'ID': {
+          'TITLE': 'FID',
+          'TYPE':'ID',
+          },
+          'SPEELBUURT': {           // Set filter Field //
+            'TITLE': 'Speelbuurt',  // Set filter title //
+            'TYPE':'TEXT',          // Set filter type //
+            //'VALUE': 'Prelude',     // Set a base value //
+          },
+          'BEHEERNUMMER': {
+            'TITLE': 'Beheernummer',
+            'TYPE':'TEXT',
+          },
+          'LOCATIENAAM': {
+            'TITLE': 'Locatienaam',
+            'TYPE':'TEXT',
+          }
+        }],
       },
 
       serverType: 'geoserver',
@@ -275,7 +293,7 @@ GeoApp.applicatieSettings = {
   sidebarHide: true,
 
   // Set default zoom, center en extent //
-  mapZoom: 4,
+  mapZoom: 7,
   mapCenter: [135089.1, 448762.5],
   //extent: [],
 
