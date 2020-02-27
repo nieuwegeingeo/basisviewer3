@@ -105,6 +105,7 @@ GeoApp.applicatieSettings = {
         }],
         legend: true,
         visible: true,
+        wfstEditTypes: ['polygon'], // ['point','polyline','polygon']
         wfstEdit: [{
           'FID': {
             'TITLE': 'FID',
@@ -113,6 +114,7 @@ GeoApp.applicatieSettings = {
           'PROJECTCODE': {
             'TITLE': 'Projectcode',
             'TYPE':'TEXT',
+            'DISPLAY': true,
             //'DISABLED': true,
           },
           'OMSCHRIJVING': {
@@ -260,6 +262,9 @@ GeoApp.applicatieSettings = {
             ]
           },
         }],
+        /*
+        // Specify the edit buttons //
+        wfstEditTypes: ['point'], // ['point','polyline','polygon']
         wfstEdit: [{
           'ID': {
           'TITLE': 'FID',
@@ -279,6 +284,7 @@ GeoApp.applicatieSettings = {
             'TYPE':'TEXT',
           }
         }],
+        */
       },
 
       serverType: 'geoserver',

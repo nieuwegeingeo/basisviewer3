@@ -461,3 +461,37 @@ border-radius: 2px 2px 0 0;
     width: 100%;
     flex-basis: auto;
 }
+
+.feature-container.ol-control {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    width: auto;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.feature-container-head,.feature-container-body {
+    height: auto;
+    background: white;
+    padding: 0.4rem;
+    font-size: 80%;
+}
+
+.feature-container-head {
+    font-weight: bold;
+}
+.feature-node {
+    cursor:pointer;
+}
+.feature-node:hover {
+    background: #842e934d;
+
+}
+
+.feature-click-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
